@@ -1,0 +1,203 @@
+<!-- Footer Component -->
+<footer class="bg-[#292929] text-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-12 mb-12 border-b border-gray-700 pb-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-6">
+                    <i data-lucide="sprout" class="w-6 h-6 text-emerald-400"></i>
+                    <span class="text-xl font-semibold tracking-tight">KisanDostAI</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                    Empowering Pakistani farmers with voice-based AI technology. Increasing yields and spreading knowledge without the internet.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="text-sm font-semibold text-white tracking-wider uppercase mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-emerald-400 transition-colors">Home</a></li>
+                    <li><a href="#about" class="hover:text-emerald-400 transition-colors">About</a></li>
+                    <li><a href="#mission" class="hover:text-emerald-400 transition-colors">Mission</a></li>
+                    <li><a href="#how-it-works" class="hover:text-emerald-400 transition-colors">How It Works</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-sm font-semibold text-white tracking-wider uppercase mb-6">Support</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="#contact" class="hover:text-emerald-400 transition-colors">Contact Us</a></li>
+                    <li><a href="mailto:support@kisandostai.com" class="hover:text-emerald-400 transition-colors">support@kisandostai.com</a></li>
+                    <li>
+                        <span class="inline-block text-emerald-400 text-xs leading-relaxed">
+                            University of Engineering<br>and Technology (UET), Peshawar, Pakistan
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+            <p>&copy; 2026 KisanDostAI. All rights reserved.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="#" id="privacy-link" class="hover:text-white transition-colors">Privacy</a>
+                <a href="#" id="terms-link" class="hover:text-white transition-colors">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Privacy Policy Modal -->
+<div id="privacy-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-hidden shadow-2xl">
+        <div class="sticky top-0 bg-white border-b border-gray-100 px-8 py-6 flex items-center justify-between">
+            <h2 class="text-2xl font-bold text-gray-900">Privacy Policy</h2>
+            <button id="close-privacy" class="w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center transition-colors">
+                <i data-lucide="x" class="w-5 h-5 text-gray-500"></i>
+            </button>
+        </div>
+        <div class="px-8 py-6 overflow-y-auto max-h-[calc(85vh-88px)] text-sm text-gray-600 leading-relaxed space-y-6">
+            <p class="text-xs text-gray-400">Last updated: January 21, 2026</p>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">1. Information Collection</h3>
+                <p>KisanDostAI collects minimal information necessary to provide voice-based agricultural assistance. When you call our service, we may record:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                    <li>Voice queries (temporarily stored for processing)</li>
+                    <li>Call duration and timestamp</li>
+                    <li>Phone number (for service improvement purposes)</li>
+                    <li>General location data (to provide region-specific advice)</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">2. How We Use Your Information</h3>
+                <p>Your information is used exclusively to:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                    <li>Process and respond to your agricultural queries</li>
+                    <li>Improve AI accuracy and service quality</li>
+                    <li>Provide region-specific weather and crop information</li>
+                    <li>Conduct research for agricultural development</li>
+                    <li>Maintain service statistics and analytics</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">3. Data Storage and Security</h3>
+                <p>We implement industry-standard security measures to protect your data. Voice recordings are encrypted and automatically deleted after 30 days unless required for service improvement. Your personal information is never shared with third parties without your explicit consent.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">4. No Sale of Personal Data</h3>
+                <p>KisanDostAI is an academic project developed at University of Engineering and Technology (UET), Peshawar, Pakistan. We do not sell, rent, or trade your personal information to any third party for commercial purposes.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">5. Your Rights</h3>
+                <p>You have the right to:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                    <li>Request deletion of your call records</li>
+                    <li>Access information we have collected about you</li>
+                    <li>Opt-out of data collection (service may be limited)</li>
+                    <li>Update or correct your information</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">6. Children's Privacy</h3>
+                <p>KisanDostAI is designed for adult farmers and agricultural workers. We do not knowingly collect information from individuals under 18 years of age.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">7. Contact Us</h3>
+                <p>For privacy-related questions or requests, contact us at:<br>
+                Email: <a href="mailto:support@kisandostai.com" class="text-emerald-600 hover:underline">support@kisandostai.com</a><br>
+                University of Engineering and Technology (UET), Peshawar, Pakistan</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Terms of Service Modal -->
+<div id="terms-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-hidden shadow-2xl">
+        <div class="sticky top-0 bg-white border-b border-gray-100 px-8 py-6 flex items-center justify-between">
+            <h2 class="text-2xl font-bold text-gray-900">Terms of Service</h2>
+            <button id="close-terms" class="w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center transition-colors">
+                <i data-lucide="x" class="w-5 h-5 text-gray-500"></i>
+            </button>
+        </div>
+        <div class="px-8 py-6 overflow-y-auto max-h-[calc(85vh-88px)] text-sm text-gray-600 leading-relaxed space-y-6">
+            <p class="text-xs text-gray-400">Last updated: January 21, 2026</p>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">1. Acceptance of Terms</h3>
+                <p>By accessing and using KisanDostAI's voice-based agricultural assistance service, you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our service.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">2. Service Description</h3>
+                <p>KisanDostAI is a voice-based AI assistant developed by University of Engineering and Technology (UET), Peshawar, Pakistan students as an academic research project. The service provides agricultural guidance, weather information, and farming advice in Urdu language through phone calls.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">3. Free Service and Availability</h3>
+                <p>KisanDostAI is currently provided free of charge as an academic project. Standard telecom call charges from your mobile operator may apply. We strive to maintain 24/7 availability but do not guarantee uninterrupted service. The service may be temporarily unavailable for maintenance or technical reasons.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">4. Information Accuracy</h3>
+                <p>While we strive to provide accurate agricultural information based on verified research and real-time data, KisanDostAI is an AI system and may occasionally provide incomplete or inaccurate information. Users should:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                    <li>Use the information as guidance, not absolute truth</li>
+                    <li>Consult local agricultural experts for critical decisions</li>
+                    <li>Verify important information through multiple sources</li>
+                    <li>Apply recommendations based on local conditions</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">5. Limitation of Liability</h3>
+                <p>KisanDostAI, University of Engineering and Technology (UET), Peshawar, Pakistan, and the project team are not liable for:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                    <li>Crop losses or financial damages resulting from information provided</li>
+                    <li>Service interruptions or technical failures</li>
+                    <li>Inaccurate or outdated information</li>
+                    <li>Any direct, indirect, or consequential damages</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">6. User Responsibilities</h3>
+                <p>Users agree to:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                    <li>Use the service for legitimate agricultural purposes only</li>
+                    <li>Not abuse, spam, or misuse the service</li>
+                    <li>Provide accurate information when requested</li>
+                    <li>Respect system resources and call duration limits</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">7. Research and Academic Use</h3>
+                <p>As an academic project, anonymized data from service usage may be used for research purposes, publications, and educational activities. Individual users will not be identified in any research outputs.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">8. Service Modifications</h3>
+                <p>We reserve the right to modify, suspend, or discontinue the service at any time without prior notice. As a university research project, the service may be terminated upon project completion or funding exhaustion.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">9. Intellectual Property</h3>
+                <p>All content, technology, and intellectual property related to KisanDostAI belong to University of Engineering and Technology (UET), Peshawar, Pakistan and the project team. Unauthorized commercial use is prohibited.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">10. Contact Information</h3>
+                <p>For questions about these Terms of Service, contact:<br>
+                Email: <a href="mailto:support@kisandostai.com" class="text-emerald-600 hover:underline">support@kisandostai.com</a><br>
+                University of Engineering and Technology (UET), Peshawar, Pakistan</p>
+            </div>
+        </div>
+    </div>
+</div>
