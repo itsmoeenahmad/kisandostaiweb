@@ -112,11 +112,73 @@ function smoothScrollToElement(elementId) {
 // ============================================================================
 
 /**
+ * Show contact form success toast
+ */
+function showContactToast() {
+    // Create toast element
+    const toast = document.createElement('div');
+    toast.className = 'fixed top-8 right-8 z-[150] animate-slide-down';
+    toast.innerHTML = `
+        <div class="bg-white border border-gray-200 px-5 py-4 rounded-2xl shadow-2xl flex items-center gap-3 max-w-md">
+            <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div class="flex-1">
+                <p class="text-sm font-semibold text-gray-900 mb-1">Message Sent!</p>
+                <p class="text-xs text-gray-600 leading-relaxed">Sent successfully! Our team will be in touch with you soon.</p>
+            </div>
+            <button onclick="this.closest('.fixed').remove()" class="w-8 h-8 rounded-full hover:bg-gray-100 flex items-center justify-center flex-shrink-0 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+    `;
+    
+    document.body.appendChild(toast);
+    
+    // Remove toast after 5 seconds
+    setTimeout(() => {
+        if (toast.parentElement) {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateY(-20px)';
+            setTimeout(() => toast.remove(), 300);
+        }
+    }, 5000);
+}
+
+/**
  * Handle contact form submission
  */
 function handleFormSubmit(event) {
-    // Allow default form submission to Formspree
-    // Formspree handles the submission automatically
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    // Submit form to Formspree
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Clear form fields
+            form.reset();
+            // Show toast notification
+            showContactToast();
+        } else {
+            response.json().then(data => {
+                if (data.errors) {
+                    alert('Oops! There was a problem submitting your form.');
+                }
+            });
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Oops! There was a problem submitting your form.');
+    });
 }
 
 // ============================================================================
@@ -141,6 +203,12 @@ document.addEventListener('DOMContentLoaded', async function () {
         
         // Initialize modals after components are loaded
         initializeModals();
+        
+        // Add form submit handler
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', handleFormSubmit);
+        }
     } catch (error) {
         console.error('Critical error during initialization:', error);
         const loadingScreen = document.getElementById('loading-screen');
